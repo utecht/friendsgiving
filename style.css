@@ -4,3 +4,10 @@
 .header-text{
     text-align: center;
 }
+.taken-true {
+    text-decoration: line-through;
+    color: grey;
+}
+ul{
+    list-style: none;
+}
