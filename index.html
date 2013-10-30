@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="friendsgivingApp">
+    <head>
+        <title>Friendsgiving</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src='angular.min.js'></script>
+        <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+        <script type='text/javascript' src='angularfire.min.js'></script>
+        <script type='text/javascript' src='fg-client.js'></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="span4 offset4">Friendsgiving</h1>
+            <p class="span6 offset3 header-text">You are invited to the second annual friendsgiving celebration at the Utecht's house on Saturday November 23rd starting at 6pm.</p>
+            <div class="row">
+                <div ng-controller="rsvpController" class="span5">
+                    <p>If you are attending please fill the form out below, so everyone can see what you are bringing.</p>
+                    <form ng-submit="addRSVP()">
+                        <input type="text" ng-model="name" size="30" placeholder="Your name">
+                        <input type="text" ng-model="food" size="30" placeholder="What you are bringing">
+                        <input class="btn-primary" type="submit" value="RSVP">
+                    </form>
+                    <ul ng-repeat="rs in rsvps">
+                        <li>{{rs.name}}</li>
+                        <li>{{rs.food}}</li>
+                    </ul>
+                </div>
+                <div ng-controller="ideaController" class="span5 offset1">
+                    <p>Is there something you want to eat but don't want to cook, suggest it below and someone else might step up.</p>
+                    <form ng-submit="addIdea()">
+                        <input type="text" ng-model="idea" size="30" placeholder="Your idea">
+                        <input class="btn-primary" type="submit" value="Add Idea">
+                    </form>
+                    <ul ng-repeat="idea in ideas">
+                        <li class="taken-{{idea.taken}}">
+                            <input type="checkbox" ng-model="idea.taken">
+                            <span>{{idea.idea}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
