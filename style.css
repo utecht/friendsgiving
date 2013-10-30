@@ -3,8 +3,8 @@ body{
 }
 .container{
     background: #F9F3E8;
-    box-shadow: 10px 10px 5px #474542;
-    border-radius: 25px;
+    box-shadow: 10px 10px 7px #474542;
+    border-radius: 15px;
     color: #A63F03;
 }
 .header-text{
@@ -27,12 +27,16 @@ h1{
 .row-fluid .lists{
     background: #C6C1B9;
     padding: 15px;
-    box-shadow: 5px 5px 2px #888888;
-    border-radius: 10px;
+    box-shadow: 3px 3px 1px #888888;
+    border-radius: 1px;
     display: table-cell;
     margin-bottom: -9999px;
     padding-bottom: 9999px;
 }
 .lists p{
     text-align: center;
+}
+#footer{
+    text-align:center;
+    margin: 50px;
 }
