@@ -13,16 +13,17 @@
         <div class="container">
             <h1 class="span4 offset4">Friendsgiving</h1>
             <p class="span6 offset3 header-text">You are invited to the second annual friendsgiving celebration at the Utecht's house on Saturday November 23rd starting at 6pm.</p>
-            <div class="row-fluid">
+            <div class="row-fluid" id="list-holder">
                 <div ng-controller="rsvpController" class="span5 offset1 lists">
                     <p>If you are attending please fill the form out below, so everyone can see what you are bringing.</p>
+                    <span><strong>{{attending()}}</strong> people attending</span>
                     <form ng-submit="addRSVP()">
                         <input type="text" ng-model="name" size="30" placeholder="Your name">
                         <input type="text" ng-model="food" size="30" placeholder="What you are bringing">
                         <input class="btn-success" type="submit" value="RSVP">
                     </form>
                     <ul ng-repeat="rs in rsvps">
-                        <li>{{rs.name}}</li>
+                        <li><strong>{{rs.name}}</strong></li>
                         <li>{{rs.food}}</li>
                     </ul>
                 </div>

@@ -11,6 +11,9 @@ fgapp.controller('rsvpController', ['$scope', 'angularFire',
         $scope.name = "";
         $scope.food = "";
     };
+    $scope.attending = function() {
+        return $scope.rsvps.length;
+    };
 }]);
 
 fgapp.controller('ideaController', ['$scope', 'angularFire', 

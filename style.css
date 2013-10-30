@@ -14,18 +14,24 @@ body{
     text-decoration: line-through;
     color: #7A6033;
 }
+#list-holder{
+    overflow:hidden;
+
+}
 ul{
     list-style: none;
 }
 h1{
     color: #730C02;
 }
-.lists{
+.row-fluid .lists{
     background: #C6C1B9;
     padding: 15px;
     box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
-    height: 1000px;
+    display: table-cell;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
 }
 .lists p{
     text-align: center;
