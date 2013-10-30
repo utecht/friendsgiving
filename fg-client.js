@@ -8,6 +8,8 @@ fgapp.controller('rsvpController', ['$scope', 'angularFire',
     angularFire(rsvpFirebase, $scope, "rsvps");
     $scope.addRSVP = function() {
         $scope.rsvps.push({name: $scope.name, food: $scope.food});
+        $scope.name = "";
+        $scope.food = "";
     };
 }]);
 
@@ -17,5 +19,6 @@ fgapp.controller('ideaController', ['$scope', 'angularFire',
     angularFire(ideaFirebase, $scope, "ideas");
     $scope.addIdea = function() {
         $scope.ideas.push({idea: $scope.idea, called: false});
+        $scope.idea = "";
     };
 }]);

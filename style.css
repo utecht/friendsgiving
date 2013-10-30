@@ -1,13 +1,32 @@
+body{
+    background: #FAB740;
+}
 .container{
-    background: lightblue;
+    background: #F9F3E8;
+    box-shadow: 10px 10px 5px #474542;
+    border-radius: 25px;
+    color: #A63F03;
 }
 .header-text{
     text-align: center;
 }
 .taken-true {
     text-decoration: line-through;
-    color: grey;
+    color: #7A6033;
 }
 ul{
     list-style: none;
+}
+h1{
+    color: #730C02;
+}
+.lists{
+    background: #C6C1B9;
+    padding: 15px;
+    box-shadow: 5px 5px 2px #888888;
+    border-radius: 10px;
+    height: 1000px;
+}
+.lists p{
+    text-align: center;
 }
